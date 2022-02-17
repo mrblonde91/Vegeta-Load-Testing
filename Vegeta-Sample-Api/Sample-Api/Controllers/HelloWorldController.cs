@@ -16,10 +16,10 @@ namespace Sample_Api.Controllers
         }
         
         [HttpGet]
-        public async Task<string> Get()
+        public async Task<string> Get(string name)
         {
             await Task.Delay(rnd.Next(0, 300));
-            return "hey";
+            return $"hey {name}";
         }
         
         [HttpPost]

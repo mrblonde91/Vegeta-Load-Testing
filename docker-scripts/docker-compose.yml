@@ -1,0 +1,13 @@
+version: '3'
+services:
+    app:
+        network_mode: bridge
+        build: .
+        #image: vegeta-load-test:latest
+        # Uncomment and set this to a local volume
+        # volumes: 
+        #    - /Users/murpmi02/workspace/notes/data/prod/2021/tests:/app/vegeta/data/report:rw
+        env_file:
+            - dev.env
+        ports:
+            - "8001:8001"        
